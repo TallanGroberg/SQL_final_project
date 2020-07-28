@@ -1,0 +1,13 @@
+
+ <div>
+ <%= link_to "Customers", customers_path  %>
+ <%= link_to "Add Customer", new_customer_path  %>
+   <% if current_user %>
+     <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+   <% else %>
+     <%= link_to "Register", new_user_registration_path  %>
+     <%= link_to "Login", new_user_session_path  %>
+   <% end %>
+ </div>
+
+
